@@ -8,8 +8,6 @@
     If more than one hacker achieved the same total score, 
     then sort the result by ascending hacker_id. Exclude all hackers with a total score of  from your result.
 */
-
-SET sql_mode = '';
 SELECT Hackers.hacker_id, Hackers.name, SUM(temp.max_score) AS total_score FROM
 (SELECT 
     S.hacker_id,
